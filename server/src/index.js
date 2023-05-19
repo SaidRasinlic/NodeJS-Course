@@ -27,11 +27,13 @@ fsOps();
 //     if (err) throw err;
 //     console.log('Write complete.');
 
+// eslint-disable-next-line max-len
 //     fs.appendFile(path.join(__dirname, 'files', 'reply.txt'), '\n- Amigoo!? Meeh, puta madre!', err => {
 //         if (err) throw err;
 //         console.log('Append complete.');
 //     });
 
+// eslint-disable-next-line max-len
 //     fs.rename(path.join(__dirname, 'files', 'reply.txt'), path.join(__dirname, 'files', 'chat.txt'), err => {
 //         if (err) throw err;
 //         console.log('Rename complete.');
