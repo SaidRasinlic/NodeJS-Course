@@ -1,7 +1,7 @@
 const path = require('path');
 const fs = require('fs');
 
-const rs = fs.createReadStream(path.join(__dirname, 'files', 'lorem.txt'), { encoding: 'utf8'});
+const rs = fs.createReadStream(path.join(__dirname, 'files', 'lorem.txt'), { encoding: 'utf8' });
 
 const ws = fs.createWriteStream(path.join(__dirname, 'files', 'new-lorem.txt'));
 

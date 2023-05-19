@@ -2,19 +2,19 @@ const path = require('path');
 const fsPromises = require('fs').promises;
 
 const fsOps = async () => {
-    try {
-        const data = await fsPromises.readFile(path.join(__dirname, 'files', 'starter.txt'), 'utf8');
-        console.log(data);
-        await fsPromises.writeFile(path.join(__dirname, 'files', 'starter.txt'), '- FS Promises rocks!');
-        await fsPromises.appendFile(path.join(__dirname, 'files', 'starter.txt'), '\n- fsProm append mode.');
-        await fsPromises.rename(path.join(__dirname, 'files', 'starter.txt'), path.join(__dirname, 'files', 'fsPromises.txt'));
-        const newData = await fsPromises.readFile(path.join(__dirname, 'files', 'fsPromises.txt'), 'utf8');
-        console.log(newData);
-        await fsPromises.unlink(path.join(__dirname, 'files', 'fsPromises.txt'));
-    } catch (err) {
-        console.error(err);
-    }
-}
+  try {
+    const data = await fsPromises.readFile(path.join(__dirname, 'files', 'starter.txt'), 'utf8');
+    console.log(data);
+    await fsPromises.writeFile(path.join(__dirname, 'files', 'starter.txt'), '- FS Promises rocks!');
+    await fsPromises.appendFile(path.join(__dirname, 'files', 'starter.txt'), '\n- fsProm append mode.');
+    await fsPromises.rename(path.join(__dirname, 'files', 'starter.txt'), path.join(__dirname, 'files', 'fsPromises.txt'));
+    const newData = await fsPromises.readFile(path.join(__dirname, 'files', 'fsPromises.txt'), 'utf8');
+    console.log(newData);
+    await fsPromises.unlink(path.join(__dirname, 'files', 'fsPromises.txt'));
+  } catch (err) {
+    console.error(err);
+  }
+};
 
 fsOps();
 
@@ -38,12 +38,11 @@ fsOps();
 //     });
 // });
 
-
 // exit on uncaught errors
 
-process.on('uncaughtException', err => {
-    console.log(`There was an uncaught error: ${err}`);
-    process.exit(1);
+process.on('uncaughtException', (err) => {
+  console.log(`There was an uncaught error: ${err}`);
+  process.exit(1);
 });
 
 // const math = require('./math');
