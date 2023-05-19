@@ -1,4 +1,9 @@
 {
+  "name": "server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+
   "devDependencies": {
     "@babel/core": "7.x",
     "@babel/eslint-parser": "7.x",
