@@ -1,0 +1,5 @@
+22-05-2023	14:21:32	ec0d65a0-fa79-48b5-95fe-f47efbc9e8bb	Log event emitted!
+22-05-2023	14:21:56	983f2486-b3eb-40fc-8099-37f9cc8f114e	Log event emitted!
+22-05-2023	14:22:53	a48de6c7-18f8-4c14-bbfc-dbb6aaef6d08	Log event emitted!
+22-05-2023	14:45:58	95b813a5-11bd-452d-a539-23fcf992b1ae	Log event emitted!
+22-05-2023	14:46:03	21829220-3bd4-4a40-9959-84449c18af08	Log event emitted!
