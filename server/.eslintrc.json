@@ -11,15 +11,9 @@
   },
   "extends": ["airbnb-base"],
   "rules": {
-    "import/no-unresolved": "off",
     "no-shadow": "off",
-    "import/no-extraneous-dependencies": [
-      "error", {
-         "devDependencies": false,
-         "optionalDependencies": false,
-         "peerDependencies": false
-      }
-  ]
+    "no-param-reassign": "off",
+    "eol-last": "off"
   },
   "ignorePatterns": [
     "dist/",
