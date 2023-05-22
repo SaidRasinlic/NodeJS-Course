@@ -3,14 +3,14 @@ const fsPromises = require('fs').promises;
 
 const fsOps = async () => {
   try {
-    const data = await fsPromises.readFile(path.join(__dirname, 'files', 'starter.txt'), 'utf8');
+    const data = await fsPromises.readFile(path.join(__dirname, '..', 'files', 'starter.txt'), 'utf8');
     console.log(data);
-    await fsPromises.writeFile(path.join(__dirname, 'files', 'starter.txt'), '- FS Promises rocks!');
-    await fsPromises.appendFile(path.join(__dirname, 'files', 'starter.txt'), '\n- fsProm append mode.');
-    await fsPromises.rename(path.join(__dirname, 'files', 'starter.txt'), path.join(__dirname, 'files', 'fsPromises.txt'));
-    const newData = await fsPromises.readFile(path.join(__dirname, 'files', 'fsPromises.txt'), 'utf8');
+    await fsPromises.writeFile(path.join(__dirname, '..', 'files', 'starter.txt'), '- FS Promises rocks!');
+    await fsPromises.appendFile(path.join(__dirname, '..', 'files', 'starter.txt'), '\n- fsProm append mode.');
+    await fsPromises.rename(path.join(__dirname, '..', 'files', 'starter.txt'), path.join(__dirname, '..', 'files', 'fsPromises.txt'));
+    const newData = await fsPromises.readFile(path.join(__dirname, '..', 'files', 'fsPromises.txt'), 'utf8');
     console.log(newData);
-    await fsPromises.unlink(path.join(__dirname, 'files', 'fsPromises.txt'));
+    await fsPromises.unlink(path.join(__dirname, '..', 'files', 'fsPromises.txt'));
   } catch (err) {
     console.error(err);
   }
@@ -18,23 +18,24 @@ const fsOps = async () => {
 
 fsOps();
 
-// fs.readFile(path.join(__dirname, 'files', 'starter.txt'), 'utf8', (err, data) => {
+// fs.readFile(path.join(__dirname, '..', 'files', 'starter.txt'), 'utf8', (err, data) => {
 //     if (err) throw err;
 //     console.log(data);
 // });
 
-// fs.writeFile(path.join(__dirname, 'files', 'reply.txt'), '- Hola amigo, como estas?', err => {
+// eslint-disable-next-line max-len
+// fs.writeFile(path.join(__dirname, '..', 'files', 'reply.txt'), '- Hola amigo, como estas?', err => {
 //     if (err) throw err;
 //     console.log('Write complete.');
 
 // eslint-disable-next-line max-len
-//     fs.appendFile(path.join(__dirname, 'files', 'reply.txt'), '\n- Amigoo!? Meeh, puta madre!', err => {
+//     fs.appendFile(path.join(__dirname, '..', 'files', 'reply.txt'), '\n- Amigoo!? Meeh, puta madre!', err => {
 //         if (err) throw err;
 //         console.log('Append complete.');
 //     });
 
 // eslint-disable-next-line max-len
-//     fs.rename(path.join(__dirname, 'files', 'reply.txt'), path.join(__dirname, 'files', 'chat.txt'), err => {
+//     fs.rename(path.join(__dirname, '..', 'files', 'reply.txt'), path.join(__dirname, 'files', 'chat.txt'), err => {
 //         if (err) throw err;
 //         console.log('Rename complete.');
 //     });
