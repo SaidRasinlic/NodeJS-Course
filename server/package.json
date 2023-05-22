@@ -1,8 +1,6 @@
 {
   "devDependencies": {
-    "@babel/core": "7.x",
-    "@babel/eslint-parser": "7.x",
-    "@babel/preset-env": "7.x",
+    "babel-eslint": "10.x",
     "eslint": "7.x",
     "eslint-config-airbnb-base": "14.x",
     "eslint-plugin-import": "2.x"
