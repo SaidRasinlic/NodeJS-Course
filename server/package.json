@@ -1,14 +1,18 @@
 {
   "devDependencies": {
-    "@babel/core": "7.x",
-    "@babel/eslint-parser": "7.x",
-    "@babel/preset-env": "7.x",
+    "babel-eslint": "10.x",
     "eslint": "7.x",
-    "eslint-config-airbnb": "18.x",
-    "eslint-plugin-import": "2.x"
+    "eslint-config-airbnb-base": "14.x",
+    "eslint-plugin-import": "2.x",
+    "nodemon": "^2.0.22",
+    "stylelint": "13.x",
+    "stylelint-config-standard": "21.x",
+    "stylelint-csstree-validator": "1.x",
+    "stylelint-scss": "3.x"
   },
   "scripts": {
-    "start": "node server"
+    "start": "node src/index",
+    "dev": "nodemon server"
   },
   "author": "Said Rasinlic",
   "license": "MIT",
