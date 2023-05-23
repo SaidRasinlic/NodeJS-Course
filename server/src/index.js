@@ -1,64 +1,125 @@
+const http = require('http');
 const path = require('path');
+const fs = require('fs');
 const fsPromises = require('fs').promises;
+const events = require('events');
+const logEvents = require('./logEvents');
 
-const fsOps = async () => {
+const eventEmitter = new events.EventEmitter();
+
+eventEmitter.on('log', (message, logName) => logEvents(message, logName));
+
+// setTimeout(() => {
+//   eventEmitter.emit('log', 'Log event emitted!');
+// }, 2000);
+
+const PORT = process.env.PORT || 3500;
+
+const serveFile = async (filePath, contentType, response) => {
   try {
-    const data = await fsPromises.readFile(path.join(__dirname, '..', 'files', 'starter.txt'), 'utf8');
-    console.log(data);
-    await fsPromises.writeFile(path.join(__dirname, '..', 'files', 'starter.txt'), '- FS Promises rocks!');
-    await fsPromises.appendFile(path.join(__dirname, '..', 'files', 'starter.txt'), '\n- fsProm append mode.');
-    await fsPromises.rename(path.join(__dirname, '..', 'files', 'starter.txt'), path.join(__dirname, '..', 'files', 'fsPromises.txt'));
-    const newData = await fsPromises.readFile(path.join(__dirname, '..', 'files', 'fsPromises.txt'), 'utf8');
-    console.log(newData);
-    await fsPromises.unlink(path.join(__dirname, '..', 'files', 'fsPromises.txt'));
+    const rawData = await fsPromises.readFile(
+      filePath,
+      !contentType.includes('image') ? 'utf8' : '',
+    );
+    const data = contentType === 'application/json'
+      ? JSON.parse(rawData) : rawData;
+
+    response.writeHead(
+      filePath.includes('404.html') ? 404 : 200,
+      { 'Content-Type': contentType },
+    );
+    response.end(
+      contentType === 'application/json' ? JSON.stringify(data) : data,
+    );
   } catch (err) {
+    response.statusCode = 500;
+    response.end();
+    eventEmitter.emit('log', `${err.name}\t${err.message}`, 'errLog.txt');
     console.error(err);
   }
 };
 
-fsOps();
+const server = http.createServer((req, res) => {
+  console.log(req.url, req.method);
 
-// fs.readFile(path.join(__dirname, '..', 'files', 'starter.txt'), 'utf8', (err, data) => {
-//     if (err) throw err;
-//     console.log(data);
-// });
+  eventEmitter.emit('log', `${req.url}\t${req.method}`, 'reqLog.txt');
 
-// eslint-disable-next-line max-len
-// fs.writeFile(path.join(__dirname, '..', 'files', 'reply.txt'), '- Hola amigo, como estas?', err => {
-//     if (err) throw err;
-//     console.log('Write complete.');
+  const extension = path.extname(req.url);
 
-// eslint-disable-next-line max-len
-//     fs.appendFile(path.join(__dirname, '..', 'files', 'reply.txt'), '\n- Amigoo!? Meeh, puta madre!', err => {
-//         if (err) throw err;
-//         console.log('Append complete.');
-//     });
+  let contentType;
 
-// eslint-disable-next-line max-len
-//     fs.rename(path.join(__dirname, '..', 'files', 'reply.txt'), path.join(__dirname, 'files', 'chat.txt'), err => {
-//         if (err) throw err;
-//         console.log('Rename complete.');
-//     });
-// });
+  switch (extension) {
+    case '.js':
+      contentType = 'text/javascript';
+      break;
+    case '.json':
+      contentType = 'application/json';
+      break;
+    case '.css':
+      contentType = 'text/css';
+      break;
+    case '.jpeg':
+      contentType = 'image/jpeg';
+      break;
+    case '.jpg':
+      contentType = 'image/jpg';
+      break;
+    case '.png':
+      contentType = 'image/png';
+      break;
+    case '.txt':
+      contentType = 'text/plain';
+      break;
+    default:
+      contentType = 'text/html';
+  }
 
-// exit on uncaught errors
+  let filePath;
 
-process.on('uncaughtException', (err) => {
-  console.log(`There was an uncaught error: ${err}`);
-  process.exit(1);
+  if (contentType === 'text/html' && req.url === '/') {
+    filePath = path.join(__dirname, '..', 'views', 'index.html');
+  } else if (contentType === 'text/html' && req.url.slice(-1) === '/') {
+    filePath = path.join(__dirname, '..', 'views', req.url, 'index.html');
+  } else if (contentType === 'text/html') {
+    filePath = path.join(__dirname, '..', 'views', req.url);
+  } else {
+    filePath = path.join(__dirname, '..', req.url);
+  }
+
+  // Makes .html extension not required in the browser
+  if (!extension && req.url.slice(-1) !== '/') filePath += '.html';
+
+  const fileExists = fs.existsSync(filePath);
+
+  if (fileExists) {
+    serveFile(filePath, contentType, res);
+  } else {
+    switch (path.parse(filePath).base) {
+      case 'old-page.html':
+        res.writeHead(301, { Location: '/new-page.html' });
+        res.end();
+        break;
+      case 'www.page.html':
+        res.writeHead(301, { Location: '/' });
+        res.end();
+        break;
+      default:
+        serveFile(path.join(__dirname, '..', 'views', '404.html'), 'text/html', res);
+    }
+  }
 });
 
-// const math = require('./math');
+/* const server = http.createServer((req, res) => {
+  console.log(req.url, req.method);
 
-// math.add(2, 3);
-// math.subtract(2, 3);
-// math.multiply(2, 3);
-// math.divide(4, 2);
+  if (req.url === '/' || req.url === '/index.html') {
+    res.statusCode = 200;
+    res.setHeader('Content-Type', 'text/html');
+    path = path.join(__dirname, '..', 'views', 'index.html');
+    fs.readFile(path, 'utf8', (err, data) => {
+      res.end(data);
+    });
+  }
+}); */
 
-// console.log(__dirname);
-// console.log(__filename);
-// console.log(path.dirname(__filename));
-// console.log(path.basename(__filename));
-// console.log(path.extname(__filename));
-
-// console.log(path.parse(__filename));
+server.listen(PORT, () => console.log(`Server running on port ${PORT}`));
