@@ -1,7 +1,2 @@
-23-05-2023	02:26:55	446bc107-c2e9-41f6-8337-6ccf03dd3449	/new-page.html	GET
-23-05-2023	02:26:55	77c094bc-3c4f-4062-aab7-afc2a883c3ee	/assets/images/man-utd.png	GET
-23-05-2023	02:27:07	7bbeb559-f3ef-482a-ac1d-5dc82431bd41	/new-page.html	GET
-23-05-2023	02:27:07	d49691c7-50db-41ed-bbf6-914e35851f8e	/assets/images/man-utd.png	GET
-23-05-2023	02:27:17	7efa0fc6-c674-499c-ae1e-bdc972b0c371	/new-page.html&	GET
-23-05-2023	02:27:17	78d88ed3-6436-4636-bef1-80cee50fef13	/assets/css/style.css	GET
-23-05-2023	02:28:01	f43d70cc-9cb7-42c4-a38d-32e386a782f1	/new-page.html&	GET
+24-05-2023	15:11:14	f6e3f652-1f33-4032-9f35-df116f305782	OPTIONS	https://www.google.com	/
+24-05-2023	15:11:14	534c1e7b-44a5-4330-883f-838fc479f447	GET	https://www.google.com	/
