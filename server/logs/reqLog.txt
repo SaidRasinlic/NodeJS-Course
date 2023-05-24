@@ -1,3 +1,2 @@
-
-23-05-2023	22:10:48	d76137f8-65f3-474f-b2da-5c2f91246f8b	GET	undefined	/said.json
-23-05-2023	22:14:22	a1ca8d73-e27e-4e53-b0cb-74452ead7531	GET	undefined	/said.json
+24-05-2023	15:11:14	f6e3f652-1f33-4032-9f35-df116f305782	OPTIONS	https://www.google.com	/
+24-05-2023	15:11:14	534c1e7b-44a5-4330-883f-838fc479f447	GET	https://www.google.com	/

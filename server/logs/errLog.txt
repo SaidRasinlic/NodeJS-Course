@@ -1,0 +1,2 @@
+24-05-2023	15:10:48	a096ced6-23d5-4b54-aa5f-a0c947052290	Error: Not allowed by CORS
+24-05-2023	15:10:48	62f617bb-595e-496c-9827-2250fbedda96	Error: Not allowed by CORS
