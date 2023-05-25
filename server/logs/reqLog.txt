@@ -3,3 +3,7 @@
 25-05-2023	16:00:13	92f8e07e-86e9-44dd-89c9-af0c687e8bbd	GET	undefined	/players/1
 25-05-2023	16:00:19	2f36a2c2-b124-4005-84eb-da0fa2bea3b9	GET	undefined	/players/1
 25-05-2023	16:00:23	6cb6d937-4207-4995-b0f9-e3340c2c28d6	GET	undefined	/players/11
+25-05-2023	16:21:13	94d6824b-56ba-49a4-be6c-34d234c5b15a	POST	undefined	/players
+25-05-2023	16:21:39	2d4f711a-5271-48f9-a0bc-77d5e6a53de8	POST	undefined	/players
+25-05-2023	16:22:01	28cda666-e122-453a-b342-164c3c1ea32a	POST	undefined	/players
+25-05-2023	16:22:29	5be08dd0-b660-46a4-8168-3d39df391ab4	POST	undefined	/players
