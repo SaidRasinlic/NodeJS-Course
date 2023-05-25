@@ -25,49 +25,14 @@ app.use(cors(corsOptions));
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
-app.use(express.static(path.join(__dirname, '..', '/public')));
+app.use('/', express.static(path.join(__dirname, '..', '/public')));
+app.use('/subdir', express.static(path.join(__dirname, '..', '/public')));
 
 const PORT = process.env.PORT || 3500;
 
-app.get('^/$|/index(.html)?', (req, res) => {
-  res.sendFile(path.join(__dirname, '..', 'views', 'index.html'));
-  // res.sendFile('views/index.html', { root: './' }); same as the upper one
-});
-
-app.get('/new-page(.html)?', (req, res) => {
-  res.sendFile(path.join(__dirname, '..', 'views', 'new-page.html'));
-});
-
-app.get('/old-page(.html)?', (req, res) => {
-  res.redirect(301, '/new-page'); // 302 by default (temp removed site)
-});
-
-// Route handlers
-app.get('/hello(.html)?', (req, res, next) => {
-  console.log('Attemted to load hello.html');
-  next();
-}, (req, res) => {
-  res.send('Hello World!');
-});
-
-// Chaining route handlers
-
-const one = (req, res, next) => {
-  console.log('One');
-  next();
-};
-
-const two = (req, res, next) => {
-  console.log('Two');
-  next();
-};
-
-const three = (req, res) => {
-  console.log('Three');
-  res.send('Chaining finished.');
-};
-
-app.get('/chain(.html)?', [one, two, three]);
+app.use('/', require('../routes/root'));
+app.use('/subdir', require('../routes/subdir'));
+app.use('/players', require('../routes/api/players'));
 
 app.all('*', (req, res) => {
   res.status(404);
