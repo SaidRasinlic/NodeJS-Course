@@ -16,7 +16,8 @@ router.route('/')
     res.json(data.players);
   })
   .post((req, res) => {
-    const reqData = req.body[0];
+    const reqData = req.body;
+    console.log(reqData);
     data.players.push(reqData);
     addPlayer(path.join(__dirname, '..', '..', 'data', 'players.json'), data);
     res.status(200).json('Player has been successfully added.');
