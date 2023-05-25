@@ -1,2 +1,5 @@
-24-05-2023	15:11:14	f6e3f652-1f33-4032-9f35-df116f305782	OPTIONS	https://www.google.com	/
-24-05-2023	15:11:14	534c1e7b-44a5-4330-883f-838fc479f447	GET	https://www.google.com	/
+25-05-2023	15:59:49	dc0d6a30-669f-4693-8b1f-0482d239ba4f	GET	undefined	/players:1
+25-05-2023	16:00:02	fda9ffd4-2a0b-4495-9d2b-12406c07ca3a	GET	undefined	/players/1
+25-05-2023	16:00:13	92f8e07e-86e9-44dd-89c9-af0c687e8bbd	GET	undefined	/players/1
+25-05-2023	16:00:19	2f36a2c2-b124-4005-84eb-da0fa2bea3b9	GET	undefined	/players/1
+25-05-2023	16:00:23	6cb6d937-4207-4995-b0f9-e3340c2c28d6	GET	undefined	/players/11
