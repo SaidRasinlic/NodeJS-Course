@@ -1,11 +1,9 @@
 const express = require('express');
-const fs = require('fs');
 const fsPromises = require('fs').promises;
 const path = require('path');
 
 const router = express.Router();
 const data = require('../../data/players.json');
-const { error } = require('console');
 
 const addPlayer = async (fileName, data) => {
   await fsPromises.writeFile(fileName, JSON.stringify(data, null, 2), (err) => {
