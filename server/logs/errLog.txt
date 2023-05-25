@@ -1,2 +1,4 @@
-24-05-2023	15:10:48	a096ced6-23d5-4b54-aa5f-a0c947052290	Error: Not allowed by CORS
-24-05-2023	15:10:48	62f617bb-595e-496c-9827-2250fbedda96	Error: Not allowed by CORS
+25-05-2023	14:29:09	0f9d4e0a-98e9-442f-8ba9-55b373643c01	TypeError: 6 is not a function
+25-05-2023	14:35:40	e9528a3a-af50-47e6-9d40-cd27e888b916	TypeError: Cannot read properties of null (reading 'id')
+25-05-2023	15:36:20	8b3734e5-b39f-4f06-aaf0-2c32f52e5b16	TypeError: Cannot read properties of undefined (reading 'find')
+25-05-2023	15:36:25	3e1d23d4-66e9-4a98-a16a-e9effd2bb4aa	TypeError: Cannot read properties of undefined (reading 'find')
