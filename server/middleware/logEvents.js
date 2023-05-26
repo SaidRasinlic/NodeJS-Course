@@ -22,4 +22,10 @@ const logger = (req, res, next) => {
   next();
 };
 
-module.exports = { logEvents, logger };
+const writePlayer = async (fileName, data) => {
+  await fsPromises.writeFile(fileName, JSON.stringify(data, null, 2), (err) => {
+    if (err) console.error(err);
+  });
+};
+
+module.exports = { logEvents, logger, writePlayer };
