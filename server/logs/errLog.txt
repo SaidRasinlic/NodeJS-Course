@@ -2,3 +2,105 @@
 25-05-2023	14:35:40	e9528a3a-af50-47e6-9d40-cd27e888b916	TypeError: Cannot read properties of null (reading 'id')
 25-05-2023	15:36:20	8b3734e5-b39f-4f06-aaf0-2c32f52e5b16	TypeError: Cannot read properties of undefined (reading 'find')
 25-05-2023	15:36:25	3e1d23d4-66e9-4a98-a16a-e9effd2bb4aa	TypeError: Cannot read properties of undefined (reading 'find')
+25-05-2023	17:19:47	f75235ef-d3d8-4497-8efb-f9126a48d570	TypeError: data.players is not iterable
+25-05-2023	17:20:05	edc114e5-f27b-4703-b26f-c20e77b81209	TypeError: data.setplayers is not a function
+25-05-2023	17:41:25	26dfbe8d-9561-463d-accb-e9fcaa44d073	TypeError: data.players is not iterable
+25-05-2023	17:41:47	5b0a60f0-8fbe-47a3-a018-b54b54cef848	TypeError: data.players is not iterable
+25-05-2023	17:43:01	1146df48-c795-4322-be71-f77f1c81e606	TypeError: data.players is not iterable
+25-05-2023	17:43:15	7b6ae274-b276-4170-aeb0-d81c53d2f4f2	TypeError: data.players is not iterable
+25-05-2023	17:49:41	29d8a4bf-3bc4-4beb-907a-47062d50646d	TypeError: data.players is not iterable
+25-05-2023	17:50:56	3b8eb0de-07bb-4ee4-b76f-8b7ad0803cfe	TypeError: data.playersData.players is not iterable
+25-05-2023	17:50:57	3587709b-ad75-4926-8399-26a8171beeb3	TypeError: data.playersData.players is not iterable
+25-05-2023	17:52:16	15ceec8b-e291-4d53-9447-ccfa3f4643a9	TypeError: data.playersData.players is not iterable
+25-05-2023	17:52:17	06e11743-e031-4db5-bac3-317259374766	TypeError: data.playersData.players is not iterable
+25-05-2023	17:52:18	771db595-f913-4abc-a908-c1f1bec5e00d	TypeError: data.playersData.players is not iterable
+25-05-2023	17:52:18	4ad319e5-f2c3-4110-890c-23303c37a844	TypeError: data.playersData.players is not iterable
+25-05-2023	17:52:18	0e582f53-7dfb-495b-af9a-2656333c80ac	TypeError: data.playersData.players is not iterable
+25-05-2023	17:52:18	834add0a-95d1-4770-a64e-9dae2e8a90de	TypeError: data.playersData.players is not iterable
+25-05-2023	17:52:19	f963aa94-e885-4e5d-9365-3a490aefe408	TypeError: data.playersData.players is not iterable
+25-05-2023	17:53:08	d56d8d83-bfaf-40d4-b4c9-705e093097f2	TypeError: data.playersData.players is not iterable
+25-05-2023	17:54:02	df0e94bf-6be0-4c97-93de-519bdf06760c	TypeError: data.playersData is not iterable
+25-05-2023	17:54:04	d77b056f-5138-43da-b073-6bf9b13a59d9	TypeError: data.playersData is not iterable
+25-05-2023	17:54:49	4b867b30-5835-48fe-9b8a-482d5d28fc92	TypeError: data.playersData.players is not iterable
+25-05-2023	17:55:57	b842f06d-c473-48c7-90e4-a0e834f9fd9d	TypeError: data.playersData is not iterable
+25-05-2023	17:55:58	d6b272a8-a150-4222-ad63-5a3ee6d6055b	TypeError: data.playersData is not iterable
+25-05-2023	17:55:59	ee67bf5c-77c4-40bd-a582-d4c13b1e894f	TypeError: data.playersData is not iterable
+25-05-2023	17:56:05	37485b32-8cb3-49e5-93ce-b3666a7a4472	TypeError: data.playersData is not iterable
+25-05-2023	17:56:06	7693cc2b-378c-469b-9eaf-b2b36e4846e3	TypeError: data.playersData is not iterable
+25-05-2023	17:56:44	f47dc805-f9bd-4379-9d81-49e9cdef6e9e	TypeError: data.playersData.players is not iterable
+25-05-2023	17:56:46	0e3b7fe9-f7cf-4422-94e9-1d2995822559	TypeError: data.playersData.players is not iterable
+25-05-2023	17:57:18	a5f25953-ea33-4a86-9366-3c5e113d2445	TypeError: data.playersData.players is not iterable
+25-05-2023	17:57:38	f97d0475-b7c5-48be-a079-2c513a602c84	TypeError: data.playersData.players is not iterable
+25-05-2023	17:58:19	e7194d17-98f8-4de6-b554-24eaf3331bdb	TypeError: data.playersData.players is not iterable
+25-05-2023	18:01:25	4f3f2572-d170-4ea3-a6dd-68dca8b5a9e6	TypeError: data.playersData is not iterable
+25-05-2023	18:01:26	87a3cd53-d85a-44cd-b64a-1b95c1e2c77e	TypeError: data.playersData is not iterable
+25-05-2023	18:01:52	8f460a57-1d63-454d-8b54-a2c2c85172b3	TypeError: data.playersData is not iterable
+25-05-2023	18:01:53	039a6249-af7d-478d-93c6-92979ab00c7b	TypeError: data.playersData is not iterable
+25-05-2023	18:02:07	7e28b1d7-252e-47d1-b16b-99dad2dc2f89	TypeError: data.playersData is not iterable
+25-05-2023	18:02:28	9d4a69e3-6cbe-49f6-a595-e1825745f47a	TypeError: data.playersData.players is not iterable
+25-05-2023	18:02:35	988a3579-7270-415f-9414-4fc544c93ea4	TypeError: data.playersData.players is not iterable
+25-05-2023	18:03:22	6d6da081-dca8-41ce-8527-fd246f06f428	TypeError: data.playersData.players is not iterable
+25-05-2023	18:03:52	d0d7b0f2-14e4-40cc-a4be-915a6cbeceed	TypeError: data.playersData.players is not iterable
+25-05-2023	18:03:54	29ec25e9-9787-43c1-84d0-acef69d1af94	TypeError: data.playersData.players is not iterable
+25-05-2023	18:03:54	17563fb7-762d-46db-99b8-98565a487bea	TypeError: data.playersData.players is not iterable
+25-05-2023	18:03:55	a2ca6ef7-89e2-426e-bea0-8e4923a14abd	TypeError: data.playersData.players is not iterable
+25-05-2023	18:04:02	334eeb45-96f9-473e-9996-cea54267598d	TypeError: data.playersData.players is not iterable
+25-05-2023	18:04:03	e5a7fbcf-f2ce-43c4-8d6a-cec54d074f2a	TypeError: data.playersData.players is not iterable
+25-05-2023	18:05:36	0e7b36d2-2ace-4e66-808e-ad74b48c4e88	TypeError: data.playersData.players is not iterable
+25-05-2023	18:05:37	7ec1452b-c145-4f18-966f-5b93ec6cfa8e	TypeError: data.playersData.players is not iterable
+25-05-2023	18:06:34	7a71b392-eb40-4a50-bdc4-234a8c680fee	TypeError: data.playersData is not iterable
+25-05-2023	18:06:35	362a8c41-dd55-4643-ab96-933163349a54	TypeError: data.playersData is not iterable
+25-05-2023	18:06:45	ebfedbea-25e0-47fb-80f1-49ac71cdc486	TypeError: data.playersData[0] is not iterable
+25-05-2023	18:06:46	d319b756-d09d-4b2a-8a1c-e401d7d6a3ae	TypeError: data.playersData[0] is not iterable
+25-05-2023	18:06:46	82821e28-99aa-4f65-8d99-05f719b646cb	TypeError: data.playersData[0] is not iterable
+25-05-2023	18:06:59	0bccdc04-f335-48f5-a765-89735ab8d60c	TypeError: data.playersData is not iterable
+25-05-2023	18:07:17	f4982375-6d9d-4619-bef6-0b8dda4dd96c	TypeError: data.playersData is not iterable
+25-05-2023	18:07:29	086cd37c-c5bc-4fd0-a46b-04fcbb44bce8	TypeError: data.playersData is not iterable
+25-05-2023	18:07:37	a4c16c6c-4d9b-4c5c-9c2d-375c8a1dc267	TypeError: data.playersData is not iterable
+25-05-2023	18:07:55	946df1e3-d962-4b6c-9e52-09ead06066fd	TypeError: data.playersData is not iterable
+25-05-2023	18:08:03	7f15e670-045a-4faa-87c8-18bf0c79ecb9	TypeError: data.playersData is not iterable
+25-05-2023	18:09:22	a62c6653-ea07-474c-ac1e-4d74965f2d24	TypeError: data.playersData.players is not iterable
+25-05-2023	18:10:55	4b0116c1-9677-4ac5-9682-de54266693c9	TypeError: data.playersData.players is not iterable
+25-05-2023	18:16:09	6d102a17-6e17-4cd2-bdf7-1b598a417019	TypeError: object is not iterable (cannot read property Symbol(Symbol.iterator))
+25-05-2023	18:16:12	835b1212-6375-41df-8751-ce0ff18ea979	TypeError: object is not iterable (cannot read property Symbol(Symbol.iterator))
+25-05-2023	18:18:10	f71ff296-546c-4226-a755-754329ad41d6	TypeError: object is not iterable (cannot read property Symbol(Symbol.iterator))
+25-05-2023	18:18:12	196eb819-8423-4c7d-a19b-f9c239b937f7	TypeError: object is not iterable (cannot read property Symbol(Symbol.iterator))
+25-05-2023	18:18:12	2db93c20-f0dc-4076-a8c6-4ff6722fe5a2	TypeError: object is not iterable (cannot read property Symbol(Symbol.iterator))
+25-05-2023	18:18:13	f8458ecf-9f80-45ce-913f-332b890b0066	TypeError: object is not iterable (cannot read property Symbol(Symbol.iterator))
+25-05-2023	18:18:29	6ebbc504-c4fd-40cd-9ca7-da3815533a08	TypeError: undefined is not iterable (cannot read property Symbol(Symbol.iterator))
+25-05-2023	18:18:30	4491b5be-f921-4238-bca6-a11f0dcfef25	TypeError: undefined is not iterable (cannot read property Symbol(Symbol.iterator))
+25-05-2023	18:18:31	1d9b1029-367c-4935-89d1-d91a1b4dc278	TypeError: undefined is not iterable (cannot read property Symbol(Symbol.iterator))
+25-05-2023	18:21:32	95c4aba9-92e8-4e97-b039-3b6acf1d2f18	TypeError: data.playersData.players is not iterable
+25-05-2023	18:22:20	a90d7802-5f9a-4e1f-b846-88e1ea41fdc6	TypeError: data.playersData is not iterable
+25-05-2023	18:22:22	dcfefecb-09bd-4790-a5d7-8db4c750b376	TypeError: data.playersData is not iterable
+25-05-2023	18:22:22	33969370-0790-474f-8d8d-63fade0805c0	TypeError: data.playersData is not iterable
+25-05-2023	18:25:12	77b7d1d0-7195-4c12-8ccf-3ede7f3ddf60	TypeError: undefined is not iterable (cannot read property Symbol(Symbol.iterator))
+25-05-2023	18:25:13	4400047e-1496-4742-9147-f48f14a7cbc4	TypeError: undefined is not iterable (cannot read property Symbol(Symbol.iterator))
+25-05-2023	18:25:13	89202f00-2e11-456c-be43-b3f66476ff83	TypeError: undefined is not iterable (cannot read property Symbol(Symbol.iterator))
+25-05-2023	18:26:08	ac292817-19b8-4af2-8442-f91619223162	TypeError: data.playersData.players is not iterable
+25-05-2023	18:26:09	48d971b6-4981-4e92-a346-3ae4f6ec06b0	TypeError: data.playersData.players is not iterable
+25-05-2023	18:28:48	db1e02db-ac00-435a-87e3-e6497d719e55	TypeError: data.setPlayers.players is not a function
+25-05-2023	18:28:49	c0eb7cdd-01e6-4573-8b83-878bb2b09563	TypeError: data.setPlayers.players is not a function
+25-05-2023	18:28:59	dcc4b4b2-5a62-4ae0-a703-c8c77e61e572	TypeError: data.setPlayers[0] is not a function
+25-05-2023	18:29:08	637657e5-914a-4168-9508-c097deb7a6fa	TypeError: data.playersData.players is not iterable
+25-05-2023	18:29:21	b1c69590-e496-46f5-870d-a875cfbaebb9	TypeError: data.playersData is not iterable
+25-05-2023	18:29:21	976ef1f6-bb3f-4472-8036-0588cc6881b7	TypeError: data.playersData is not iterable
+25-05-2023	18:29:22	ac9c534b-76ce-43c4-a02c-096f186b66b9	TypeError: data.playersData is not iterable
+25-05-2023	18:29:23	0c8f2977-3eb1-40e6-b955-5118a524ad9b	TypeError: data.playersData is not iterable
+25-05-2023	18:30:57	0230b21c-1173-4513-9b44-0f41b78d84a9	TypeError: Cannot convert undefined or null to object
+25-05-2023	18:31:18	37d38b3b-1417-48f5-89e0-764fb5de1050	TypeError: Cannot convert undefined or null to object
+25-05-2023	18:31:18	39889501-3478-419d-b949-a7700f254415	TypeError: Cannot convert undefined or null to object
+25-05-2023	18:31:19	d81ec1fe-be2b-4b83-b35f-cb75984e8df9	TypeError: Cannot convert undefined or null to object
+25-05-2023	18:31:28	21d92a9b-d9ae-4b0c-ba73-c0a613902540	TypeError: Cannot read properties of undefined (reading 'players')
+25-05-2023	18:32:11	e0b5d978-babd-4f1b-b89c-4aaf281884a8	TypeError: Cannot convert undefined or null to object
+25-05-2023	18:32:12	abe6fea9-88fa-40fd-b7ce-febc2b3dce0a	TypeError: Cannot convert undefined or null to object
+25-05-2023	18:32:38	e1cf260a-c9f8-498c-b550-dc3d156a35d8	TypeError: data.playersData is not iterable
+25-05-2023	18:33:08	1b4edaea-9189-4f84-a3d5-804e8979b012	TypeError: Cannot convert undefined or null to object
+25-05-2023	18:33:54	1ff6c6a0-55d4-4fd3-bbd8-3fc8a764077f	TypeError: data.playersData is not iterable
+25-05-2023	18:36:16	c8327f5c-7871-4f41-8516-781384f1400b	TypeError: data.playersData is not iterable
+25-05-2023	18:36:24	06e01a8c-f136-4452-86dc-0054d1fd1791	TypeError: data.playersData is not iterable
+25-05-2023	18:37:12	db5c1056-8350-456f-bc17-d308ddc8e0c8	TypeError: data.playersData[1] is not iterable
+25-05-2023	18:37:13	15a5d64d-503e-45dc-97eb-ee6478813216	TypeError: data.playersData[1] is not iterable
+25-05-2023	18:37:32	1826374a-ac6a-418a-9187-0744543ab05b	TypeError: data.playersData.players is not iterable
+25-05-2023	18:37:34	dc1a7e11-3588-4436-bf27-4335a909fb34	TypeError: data.playersData.players is not iterable
+26-05-2023	14:17:39	e69049b3-9ec5-4f41-97c7-3ba297e662a0	TypeError: Cannot read properties of undefined (reading 'find')
