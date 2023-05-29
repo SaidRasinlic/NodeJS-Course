@@ -1,0 +1,24 @@
+{
+  "users": [
+    {
+      "username": "Said",
+      "password": "123"
+    },
+    {
+      "username": "amidzaaa",
+      "password": "$2b$10$GoOaVBfh7eJHy1HB6N8tX.C/XsYqah25YoTmcbeYTb/cF5n01xNWG"
+    },
+    {
+      "username": "johndoe",
+      "password": "$2b$10$3KBvZllWKriX4VI4Bigk2OJ1F4z/k0dSc8o67edHnDFPV0yOw.gYe"
+    }, 
+    {
+      "username": "said",
+      "password": "$2b$10$LTwQ0RJ9jkAwvCBfEgt3WumnkRgHV6Td0Yq6AvT16cwjIY4nMcsvC"
+    },
+    {
+      "username": "said123",
+      "password": "$2b$10$5ySm9e6hn.CUwprqyFrQN.PyUvVwORn3Ci3eEGDLr6PGY/1uGVPZG"
+    }
+  ]
+}

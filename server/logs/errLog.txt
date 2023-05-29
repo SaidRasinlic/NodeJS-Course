@@ -104,3 +104,4 @@
 25-05-2023	18:37:32	1826374a-ac6a-418a-9187-0744543ab05b	TypeError: data.playersData.players is not iterable
 25-05-2023	18:37:34	dc1a7e11-3588-4436-bf27-4335a909fb34	TypeError: data.playersData.players is not iterable
 26-05-2023	14:17:39	e69049b3-9ec5-4f41-97c7-3ba297e662a0	TypeError: Cannot read properties of undefined (reading 'find')
+26-05-2023	19:35:30	e6523765-58f4-45d6-8bb1-4677298572f9	SyntaxError: Unexpected string in JSON at position 17

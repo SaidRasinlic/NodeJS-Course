@@ -31,8 +31,9 @@ app.use('/subdir', express.static(path.join(__dirname, '..', '/public')));
 const PORT = process.env.PORT || 3500;
 
 app.use('/', require('../routes/root'));
-app.use('/subdir', require('../routes/subdir'));
 app.use('/players', require('../routes/api/players'));
+app.use('/register', require('../routes/register'));
+app.use('/auth', require('../routes/auth'));
 
 app.all('*', (req, res) => {
   res.status(404);

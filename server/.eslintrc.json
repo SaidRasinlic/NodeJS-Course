@@ -15,6 +15,9 @@
   "rules": {
     "import/no-unresolved": "off",
     "no-shadow": "off",
+    "func-names": "warn",
+    "object-shorthand": "warn",
+    "global-require": "warn",
     "import/no-extraneous-dependencies": [
       "error", {
          "devDependencies": false,

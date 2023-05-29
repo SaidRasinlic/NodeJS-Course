@@ -3,7 +3,7 @@ const logEvents = require('../middleware/logEvents');
 
 const data = {
   // eslint-disable-next-line global-require
-  playersData: require('../data/players.json'),
+  playersData: require('../model/players.json'),
   // eslint-disable-next-line func-names, object-shorthand
   setPlayers: function (newData) { this.playersData = newData; },
 };
@@ -23,7 +23,7 @@ const createNewPlayer = (req, res) => {
     return res.status(400).json('First and last names are required.');
   }
   data.setPlayers({ players: [...data.playersData.players, newPlayer] });
-  logEvents.writePlayer(path.join(__dirname, '..', 'data', 'players.json'), data.playersData);
+  logEvents.writeData(path.join(__dirname, '..', 'model', 'players.json'), data.playersData);
   return res.status(201).json(data.playersData);
 };
 
@@ -41,7 +41,7 @@ const updatePlayer = (req, res) => {
     // eslint-disable-next-line no-nested-ternary
     players: unsortedArray.sort((a, b) => (+a.id > +b.id ? 1 : +a.id < +b.id ? -1 : 0)),
   });
-  logEvents.writePlayer(path.join(__dirname, '..', 'data', 'players.json'), data.playersData);
+  logEvents.writeData(path.join(__dirname, '..', 'model', 'players.json'), data.playersData);
   return res.status(200).json(data.playersData);
 };
 
@@ -52,7 +52,7 @@ const deletePlayer = (req, res) => {
   }
   const filteredArray = data.playersData.players.filter((player) => player.id !== req.body.id);
   data.setPlayers({ players: [...filteredArray] });
-  logEvents.writePlayer(path.join(__dirname, '..', 'data', 'players.json'), data.playersData);
+  logEvents.writeData(path.join(__dirname, '..', 'model', 'players.json'), data.playersData);
   return res.status(200).json(data.playersData);
 };
 
