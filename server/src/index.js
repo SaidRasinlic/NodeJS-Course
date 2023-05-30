@@ -1,37 +1,46 @@
 const path = require('path');
 const express = require('express');
 const cors = require('cors');
+const cookieParser = require('cookie-parser');
 const { logger } = require('../middleware/logEvents');
+const credentials = require('../middleware/credentials');
 const errorHandler = require('../middleware/errorHandler');
+const verifyJWT = require('../middleware/verifyJWT');
+const corsOptions = require('../config/corsOptions');
 
 const app = express();
 
 // Custom middleware logger
-
 app.use(logger);
 
-const whitelist = ['http://localhost:3000', 'https://www.google.com'];
-const corsOptions = {
-  origin: (origin, callback) => {
-    if (whitelist.indexOf(origin) !== -1 || !origin) { // origin is undefined a.k.a localhost
-      callback(null, true);
-    } else {
-      callback(new Error('Not allowed by CORS'));
-    }
-  },
-  optionSuccessStatus: 200,
-};
+// Handle options credentials check - before CORS!
+// and fetch cookies credentials requirement
+app.use(credentials);
+
+// Cross Origin Resource Sharing
 app.use(cors(corsOptions));
 
+// built-in middleware to handle urlencoded form data
 app.use(express.urlencoded({ extended: false }));
+
+// built-in middleware for json
 app.use(express.json());
+
+// built-in middleware for cookies
+app.use(cookieParser());
+
 app.use('/', express.static(path.join(__dirname, '..', '/public')));
 app.use('/subdir', express.static(path.join(__dirname, '..', '/public')));
 
 const PORT = process.env.PORT || 3500;
 
 app.use('/', require('../routes/root'));
-app.use('/subdir', require('../routes/subdir'));
+app.use('/register', require('../routes/register'));
+app.use('/auth', require('../routes/auth'));
+app.use('/refresh', require('../routes/refresh'));
+app.use('/logout', require('../routes/logout'));
+
+app.use(verifyJWT);
 app.use('/players', require('../routes/api/players'));
 
 app.all('*', (req, res) => {
