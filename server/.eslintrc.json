@@ -28,6 +28,14 @@
   },
   "ignorePatterns": [
     "dist/",
-    "build/"
+    "build/",
+		"dist/**/*",
+		"mobile/**/*",
+		"node_modules/**/*",
+		"node-mobile/**/*",
+		"node-native/**/*",
+		"obj/**/*",
+		"styles/**/*",
+		"themes/**/*"
   ]
 }

@@ -2,14 +2,12 @@ const path = require('path');
 const logEvents = require('../middleware/logEvents');
 
 const data = {
-  // eslint-disable-next-line global-require
   playersData: require('../model/players.json'),
-  // eslint-disable-next-line func-names, object-shorthand
   setPlayers: function (newData) { this.playersData = newData; },
 };
 
 const getAllPlayers = (req, res) => {
-  res.json(data.players);
+  res.json(data.playersData);
 };
 
 const createNewPlayer = (req, res) => {
