@@ -14,7 +14,9 @@ const handleLogout = async (req, res) => {
   const refreshToken = cookies.jwt;
 
   // Is refreshToken in db?
-  const foundUser = usersDB.usersData.users.find((user) => user.refreshToken === refreshToken);
+  const foundUser = usersDB.usersData.users.find(
+    (user) => user.refreshToken === refreshToken,
+  );
 
   if (!foundUser) {
     res.clearCookie('jwt', { httpOnly: true, sameSite: 'None', secure: true });
@@ -22,7 +24,7 @@ const handleLogout = async (req, res) => {
   }
 
   // Delete refreshToken in db and clear the currentUser refreshToken
-  const otherUsers = usersDB.usersData.users.filter(
+  const otherUsers = usersDB.usersData.users.userInfo.filter(
     (user) => user.refreshToken !== foundUser.refreshToken,
   );
   const currentUser = { ...foundUser, refreshToken: '' };

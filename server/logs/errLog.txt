@@ -107,3 +107,5 @@
 26-05-2023	19:35:30	e6523765-58f4-45d6-8bb1-4677298572f9	SyntaxError: Unexpected string in JSON at position 17
 29-05-2023	18:42:33	cf215e45-57f9-4cf7-81f2-52501792aa60	SyntaxError: Unexpected token e in JSON at position 0
 29-05-2023	18:42:59	084d2c47-915d-4556-b4c9-5535de842313	SyntaxError: Unexpected token e in JSON at position 0
+31-05-2023	15:59:23	a49616d6-92dc-44c0-9634-4be90958983d	TypeError: Cannot read properties of undefined (reading 'username')
+31-05-2023	15:59:25	ca720f3c-6a70-414f-9e8b-066285dea479	TypeError: Cannot read properties of undefined (reading 'username')
