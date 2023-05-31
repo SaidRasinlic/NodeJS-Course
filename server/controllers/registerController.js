@@ -12,13 +12,21 @@ const handleNewUser = async (req, res) => {
 
   if (!username || !password) return res.status(400).json('Username and password are required.');
 
-  const duplicate = usersDB.usersData.users.find((user) => user.username === req.body.username);
+  const duplicate = usersDB.usersData.users.find(
+    (user) => user.username === req.body.username,
+  );
 
   if (duplicate) return res.status(409).json(`Conflict: User with username ${username} already exists.`);
 
   try {
     const hashedPwd = await bcrypt.hash(password, 10);
-    const newUser = { username: username, password: hashedPwd };
+    const newUser = {
+      userInfo: {
+        username: username,
+        password: hashedPwd,
+      },
+      role: { user: 0 },
+    };
     usersDB.setUsers({ users: [...usersDB.usersData.users, newUser] });
     console.log(usersDB.usersData);
 

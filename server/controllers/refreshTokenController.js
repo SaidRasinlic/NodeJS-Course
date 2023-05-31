@@ -9,10 +9,11 @@ const usersDB = {
 const handleRefreshToken = (req, res) => {
   const { cookies } = req;
   if (!cookies?.jwt) return res.sendStatus(401);
-  console.log(cookies.jwt);
   const refreshTOken = cookies.jwt;
 
-  const foundUser = usersDB.usersData.users.find((user) => user.refreshToken === refreshTOken);
+  const foundUser = usersDB.usersData.users.find(
+    (user) => user.userInfo.refreshToken === refreshTOken,
+  );
 
   if (!foundUser) return res.sendStatus(403); // Forbidden
   // evaluate jwt
@@ -20,9 +21,16 @@ const handleRefreshToken = (req, res) => {
     refreshTOken,
     process.env.REFRESH_TOKEN_SECRET,
     (err, decoded) => {
-      if (err || foundUser.username !== decoded.username) return res.sendStatus(403);
+      // eslint-disable-next-line max-len
+      if (err || foundUser.userInfo.username !== decoded.username) return res.sendStatus(403);
+
       const accessToken = jwt.sign(
-        { username: decoded.username },
+        {
+          userInfo: {
+            username: decoded.username,
+          },
+          role: foundUser.role,
+        },
         process.env.ACCESS_TOKEN_SECRET,
         { expiresIn: '30s' },
       );
