@@ -1,11 +1,13 @@
 const express = require('express');
 const playersController = require('../../controllers/playersController');
+const verifyRoles = require('../../middleware/verifyRoles');
+const ROLES_LIST = require('../../config/roles_list');
 
 const router = express.Router();
 
 router.route('/')
   .get(playersController.getAllPlayers)
-  .post(playersController.createNewPlayer)
+  .post(verifyRoles(ROLES_LIST.admin), playersController.createNewPlayer)
   .put(playersController.updatePlayer)
   .delete(playersController.deletePlayer);
 

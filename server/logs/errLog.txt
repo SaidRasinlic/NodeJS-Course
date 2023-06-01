@@ -109,3 +109,7 @@
 29-05-2023	18:42:59	084d2c47-915d-4556-b4c9-5535de842313	SyntaxError: Unexpected token e in JSON at position 0
 31-05-2023	15:59:23	a49616d6-92dc-44c0-9634-4be90958983d	TypeError: Cannot read properties of undefined (reading 'username')
 31-05-2023	15:59:25	ca720f3c-6a70-414f-9e8b-066285dea479	TypeError: Cannot read properties of undefined (reading 'username')
+31-05-2023	18:49:05	2e35d891-fa1b-4f84-9efb-9a9c65372f52	TypeError: req.role.map is not a function
+31-05-2023	18:50:35	c6f630c6-9cfb-4ab8-a167-456b2aff8c45	TypeError: req.role.map is not a function
+31-05-2023	19:01:37	3331f748-bd22-4f98-99b4-c99b9d4c1aed	TypeError: req.role.map is not a function
+31-05-2023	19:21:45	77d5ea9b-470d-4ea8-974b-7d7c75b7f572	TypeError: req.role.map is not a function

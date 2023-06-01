@@ -3,17 +3,18 @@
     {
       "userInfo": {
         "username": "New Nigga",
-        "password": "$2b$10$9Jf8/w/2TBUUU4t6ewi.1ObIxk1HcogkFF9zk6foRMSyZj8b25fam"
+        "password": "$2b$10$9Jf8/w/2TBUUU4t6ewi.1ObIxk1HcogkFF9zk6foRMSyZj8b25fam",
+        "refreshToken": ""
       },
       "role": {
-        "user": 0
+        "user": "0"
       }
     },
     {
       "userInfo": {
         "username": "sultan",
         "password": "$2b$10$c05zCMLO8AuqMdiU/s7Kxe6B/CyFRBoGBu9d91HS8wd912zD5LfHG",
-        "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InN1bHRhbiIsImlhdCI6MTY4NTU0MTQ2MCwiZXhwIjoxNjg1NjI3ODYwfQ.s4njtnT2a2OS8XQGmG7ZcMOHXRcYyCs_5i33qMcOgB4"
+        "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InN1bHRhbiIsImlhdCI6MTY4NTU1NTM5MSwiZXhwIjoxNjg1NjQxNzkxfQ.4IwAG8T2w4P_gUOmeguc08fSkejEqUfA_uZLgauRpSU"
       },
       "role": {
         "admin": "1"

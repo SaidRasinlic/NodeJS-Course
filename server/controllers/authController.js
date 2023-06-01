@@ -19,6 +19,9 @@ const handleLogin = async (req, res) => {
   if (!match) {
     return res.status(401).json('Username and password does not match.');
   }
+
+  const role = Object.values(foundUser.role);
+
   // create JWTs
 
   const accessToken = jwt.sign(
@@ -26,7 +29,7 @@ const handleLogin = async (req, res) => {
       userInfo: {
         username: foundUser.userInfo.username,
       },
-      role: foundUser.role,
+      role: role,
     },
     process.env.ACCESS_TOKEN_SECRET,
     { expiresIn: '30s' },
