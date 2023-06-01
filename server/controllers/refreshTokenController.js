@@ -24,12 +24,14 @@ const handleRefreshToken = (req, res) => {
       // eslint-disable-next-line max-len
       if (err || foundUser.userInfo.username !== decoded.username) return res.sendStatus(403);
 
+      const role = Object.values(foundUser.role);
+
       const accessToken = jwt.sign(
         {
           userInfo: {
             username: decoded.username,
           },
-          role: foundUser.role,
+          role: role,
         },
         process.env.ACCESS_TOKEN_SECRET,
         { expiresIn: '30s' },

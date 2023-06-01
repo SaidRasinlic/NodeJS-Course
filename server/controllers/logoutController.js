@@ -15,7 +15,7 @@ const handleLogout = async (req, res) => {
 
   // Is refreshToken in db?
   const foundUser = usersDB.usersData.users.find(
-    (user) => user.refreshToken === refreshToken,
+    (user) => user.userInfo.refreshToken === refreshToken,
   );
 
   if (!foundUser) {
@@ -24,10 +24,11 @@ const handleLogout = async (req, res) => {
   }
 
   // Delete refreshToken in db and clear the currentUser refreshToken
-  const otherUsers = usersDB.usersData.users.userInfo.filter(
-    (user) => user.refreshToken !== foundUser.refreshToken,
+  const otherUsers = usersDB.usersData.users.filter(
+    (user) => user.userInfo.refreshToken !== foundUser.userInfo.refreshToken,
   );
-  const currentUser = { ...foundUser, refreshToken: '' };
+
+  const currentUser = { ...foundUser, userInfo: { ...foundUser.userInfo, refreshToken: '' } };
 
   usersDB.setUsers({ users: [...otherUsers, currentUser] });
   logEvents.writeData(path.join(__dirname, '..', 'model', 'users.json'), usersDB.usersData);
